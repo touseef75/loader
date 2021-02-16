@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252839;
+}
+h1{
+    position: relative;
+    color: #252839;
+    font-size: 14vw;
+    -webkit-text-stroke: 0.3vw #383d52;
+}
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: o;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: loader 5s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes loader{
+    0%{
+        width: 0;
+    }
+    70%{
+        width: 100%;
+    }
+}
